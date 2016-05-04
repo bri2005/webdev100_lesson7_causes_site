@@ -1,0 +1,35 @@
+.story_image{
+	
+	width: 300px;
+	height: 300px;
+	
+}
+.ourStory{
+	width: 100%;
+	float: left;
+	margin-left: 50px;
+	
+}
+.donate_image{
+	margin-left: 50px;
+	width: 300px;
+	height: 300px;
+}
+
+.whyDonate{
+	width: 100%;
+	float: right;
+
+	
+}
+
+.leftColumn{
+	float: left;
+	width: 50%;
+
+}
+
+.rightColumn{
+	float: left;
+	width: 50%;
+}
