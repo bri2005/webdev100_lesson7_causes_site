@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<title>Donate</title>
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+
+<style>
+
+body {
+	box-sizing: border-box;
+}
+
+#donationHeader {
+	text-align: center;
+}
+
+#donationPanel {
+	padding: 30px;
+	width: 40%;
+}
+
+#donationSharkImage {
+	content: url('images/shark_welcome.jpg');
+	width: 40%;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Top level navigation bar -->
+<nav>
+<ul>
+	<li><a href="./index.html">Home</a></li>
+	<li><a href="./aboutCause.html">About Us</a></li>
+	<li><a href="./image_gallery.html">Photos</a></li>
+	<li><a href="./donate.html">Donate</a></li>
+</ul>
+</nav>
+
+<!-- Holder for the content below the navigation bar-->
+
+<div class="igc">
+
+	<h1 id="donationHeader">Donate!</h1>
+
+	<!-- donations panel on the left side -->
+	<div id="donationPanel" class="contentHolder">
+		<span id="donationSubHeader">Choose the amount you'd like to donate:</span>
+		<br></br>
+
+		<form id="donationChooserFrm">
+			<input type="radio" name="donationVal" value="5" checked>$5<br>
+			<input type="radio" name="donationVal" value="10">$10<br>
+			<input type="radio" name="donationVal" value="20">$20<br>
+			<br></br>	
+			Enter your amount..
+			<input type="text" name="donationVal">
+		</form>
+
+		<br></br>
+
+	</div> 
+
+	<!-- image on the right side of the page, this should be a different shark -->
+	<div id="donationSharkImage" class="contentHolder"></div>
+
+</div> <!-- end content panel -->
+
+</body>
+
+</html>
