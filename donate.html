@@ -4,6 +4,9 @@
 
 <head>
 
+<!-- jQuery CDN -->
+<script   src="https://code.jquery.com/jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
+
 <link rel="stylesheet" type="text/css" href="styles/style.css">
 
 <style>
@@ -18,12 +21,12 @@ body {
 
 #donationPanel {
 	padding: 30px;
-	width: 40%;
+	width: 42%;
 }
 
 #donationSharkImage {
 	content: url('images/shark_welcome.jpg');
-	width: 40%;
+	width: 42%;
 }
 
 </style>
@@ -58,11 +61,17 @@ body {
 			<input type="radio" name="donationVal" value="10">$10<br>
 			<input type="radio" name="donationVal" value="20">$20<br>
 			<br></br>	
-			Enter your amount..
-			<input type="text" name="donationVal">
+			Or enter your amount..  $
+			<input type="text" id="donationDisplayTxt" name="donationVal">
+			<input type="button" id="submitDonation" value="Send Donation">
 		</form>
 
+
+
 		<br></br>
+
+		<!-- div to show "Thanks for your donation after user clicks Send Donation" -->
+		<div id="showThanksForDonationMessage"></div>
 
 	</div> 
 
@@ -70,6 +79,38 @@ body {
 	<div id="donationSharkImage" class="contentHolder"></div>
 
 </div> <!-- end content panel -->
+
+
+<!-- script for saying thanks after sending the donation --> 
+<script>
+
+$(document).ready(
+
+	function() {
+
+		//default it to $5
+		$("#donationDisplayTxt").val($("input:checked").val());
+
+		//when they update the radio button update the donation text box
+		$('input:radio[name=donationVal]').on('change', function() {
+			$('#donationDisplayTxt').val($('input:radio[name=donationVal]:checked').val());
+		});
+
+		//when they submit the donation, display a thank you message..
+		$("#submitDonation").click(
+			function() {
+				$("#showThanksForDonationMessage")
+				.text("Thanks for your donation of $"+
+					 $('#donationDisplayTxt').val());
+			}
+		);
+	} 
+
+	// end wrapper function
+); // end document.ready
+
+
+</script>
 
 </body>
 
