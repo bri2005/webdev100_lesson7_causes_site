@@ -8,9 +8,13 @@
 }
 
 /*Navigation bar settings*/
+body{
+	background-color: #00ccff;
 
+}
 nav {
 	background-color: lightgrey;
+	padding: 5px;
 }
 
 ul {
